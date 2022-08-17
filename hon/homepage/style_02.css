@@ -1,0 +1,119 @@
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style-type: none; /* 리스트 디스크 없애기*/
+    text-decoration: none; /*밑줄 없애기*/
+    border-collapse: collapse;
+    margin: 0px ;   /*HTML 기본으로 들어있는 magin padding 없애기*/
+    padding: 0px;
+    color :#000;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 100; /*글자 두께 설정*/
+}
+.contents1{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.result{
+    font-size: 24px;
+}
+.intro_bg{
+    background-image: url("img/intro.png");
+    width : 100%; 
+    height: 718px;
+}
+
+.header{
+     display: flex; /*blcok태그들을 한줄에 배치*/
+    width: 1280px;
+    margin :auto;
+    /* background-color: red; */
+    height: 86px;
+}
+
+.nav{
+    display: flex; /*head의 자식인 div까지 지정해주기*/
+    justify-content: flex-end; /* 오른쪽 끝 menu이름 붙이기*/
+    line-height: 86px;
+    width :calc(1280px - 300px);
+    /* background-color: blue; */
+}
+
+.nav > li {
+    margin-left: 84px;
+}
+.nav > li > a {
+    color : white;
+}
+
+.serchArea{
+    width: 300px;
+    height:40px;
+    /* background-color: green; */
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin-top: 24px;
+} 
+.serchArea > form > input {
+    border:none; /*검색창 선 없애기*/
+    width: 250px;
+    height:40px;
+    background: rgba(0,0,0,0.0);
+    color: #fff;
+    padding-left: 10px;
+
+}
+.serchArea > form > span {
+    width:  50px; /* 300px에 250px 줬으니 남은 px 채우기*/
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    
+
+}
+.intro_text{
+    width: 100%;
+    margin : 231px auto  231px auto; /*상 우 좌 하 여백 맞추기*/
+    /*  background: red; */
+    text-align: center; /* 가운데 맞추기*/
+} 
+.intro_text > h1, 
+.intro_text > h4 {
+    color: #fff; 
+}
+
+.amount{
+    position: relative; /*현재 위치 */
+    top: -66px; /* 사진에 반걸쳐져 올라와있으니깐 높이/ 2 */
+    width: 1280px;
+    background :  white;
+    display:flex; /*한줄에 배치*/
+    margin: auto; /*가운데로 오기*/
+    box-shadow: 5px 0px 10px  rgba(0,0,0,0.1);
+    /*오른쪽 아래 흐려지는정도 색*/
+    /* -5px 0px 10px  rgba(0,0,0,0.5) */
+    /* -를 주면 오른쪽이아닌 왼쪽으로 그림자가생긴다 */
+}
+
+
+.amount > li{
+    flex: 1;/*부모요소의 flex를 주고 ,자식에게 felx값 입력, 값한자리씩 차지하기*/
+    /* background: skyblue; */
+    height: 132px;
+  
+}
+.amount> li > div  {
+    text-align: center; /*글자 가운데*/
+    /* background:green ; */
+    height: 57px;
+    margin-top: 37px;
+}
+
+.amount> li:not(:last-child) > div {
+    /*li요소중 마지막 li를 제외한 div */
+    border-right: 1px solid  #E1E1E1; /*영역 나누는 선*/
+
+}
