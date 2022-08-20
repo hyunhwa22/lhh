@@ -1,0 +1,285 @@
+@charset "UTF-8";
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style-type: none; /* 리스트 디스크 없애기*/
+    text-decoration: none; /*밑줄 없애기*/
+    border-collapse: collapse;
+    margin: 0px ;   /*HTML 기본으로 들어있는 magin padding 없애기*/
+    padding: 0px;
+    color :#000;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 100; /*글자 두께 설정*/
+}
+.contents1{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.contents1_bold{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contents1_light{
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/*-----------공통 요소 분리------------------*/
+
+
+.result{
+    font-size: 24px;
+}
+.intro_bg{
+    background-image: url("img/intro.png");
+    width : 100%; 
+    height: 718px;
+}
+
+.header{
+     display: flex; /*blcok태그들을 한줄에 배치*/
+    width: 1280px;
+    margin :auto;
+    /* background-color: red; */
+    height: 86px;
+}
+
+.nav{
+    display: flex; /*head의 자식인 div까지 지정해주기*/
+    justify-content: flex-end; /* 오른쪽 끝 menu이름 붙이기*/
+    line-height: 86px;
+    width :calc(1280px - 300px);
+    /* background-color: blue; */
+}
+
+.nav > li {
+    margin-left: 84px;
+}
+.nav > li > a {
+    color : white;
+}
+
+.serchArea{
+    width: 300px;
+    height:40px;
+    /* background-color: green; */
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin-top: 24px;
+} 
+.serchArea > form > input {
+    border:none; /*검색창 선 없애기*/
+    width: 250px;
+    height:40px;
+    background: rgba(0,0,0,0.0);
+    color: #fff;
+    padding-left: 10px;
+
+}
+.serchArea > form > span {
+    width:  50px; /* 300px에 250px 줬으니 남은 px 채우기*/
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    
+
+}
+.intro_text{
+    width: 100%;
+    margin : 231px auto  231px auto; /*상 우 좌 하 여백 맞추기*/
+    /*  background: red; */
+    text-align: center; /* 가운데 맞추기*/
+} 
+.intro_text > h1, 
+.intro_text > h4 {
+    color: #fff; 
+}
+
+.amount{
+    position: relative; /*현재 위치 */
+    /*relative 사용시 다른 태그요소에 영향을 끼치지앟고 자신의영역 유지*/
+    top: -66px; /* 사진에 반걸쳐져 올라와있으니깐 높이/ 2 */
+    width: 1280px;
+    background :  white;
+    display:flex; /*한줄에 배치*/
+    margin: auto; /*가운데로 오기*/
+    box-shadow: 5px 0px 10px  rgba(0,0,0,0.1);
+    /*오른쪽 아래 흐려지는정도 색*/
+    /* -5px 0px 10px  rgba(0,0,0,0.5) */
+    /* -를 주면 오른쪽이아닌 왼쪽으로 그림자가생긴다 */
+}
+
+
+.amount > li{
+    flex: 1;/*부모요소의 flex를 주고 ,자식에게 felx값 입력, 값한자리씩 차지하기*/
+    /* background: skyblue; */
+    height: 132px;
+  
+}
+.amount> li > div  {
+    text-align: center; /*글자 가운데*/
+    /* background:green ; */
+    height: 57px;
+    margin-top: 37px;
+}
+
+.amount> li:not(:last-child) > div {
+    /*li요소중 마지막 li를 제외한 div */
+    border-right: 1px solid  #E1E1E1; /*영역 나누는 선*/
+
+}
+
+/*main_text0*/
+
+.main_text0 {
+    width: 100%;
+    height: 601px;
+    margin-top: -132px;
+    background :#F1F2F3;
+}
+.main_text0 > h1 {
+    padding-top: 116px;
+    text-align: center;
+    /* background-color: skyblue;; */
+}
+
+.main_text0 .contents1 {
+    text-align: center;
+}
+
+.icons{
+    display: flex;
+    width: 1280px; /*1280영역 내에서 3분할*/
+    /* background: orange; */
+    margin: auto;
+}
+  
+
+.icons > li {
+    flex :1;/*1자리씩 차지*/
+    background: white;
+    height: 302px;
+    margin-top: 49px; /*재규어! 와의 거리*/
+    text-align: center; /*아이콘, 글자 가운데로 위치하기*/
+}
+
+.icons > li:not(:last-child) {
+    /*맨 오른쪽 제외(li마지막요소)하고 여백주기*/
+    margin-right: 20px;
+}
+
+.icons > li > .icon_img {
+    margin-top: 18px;
+}
+
+.icons > li > .contents1_light {
+    width: 240px;
+    height: 34px;
+    letter-spacing: -1px; /*글자 간격 줄이기*/
+    margin: auto;
+}
+
+.more{
+    width: 100px;
+    height: 30px;
+    background: #2F7AF4;
+    color: white;
+    margin-top: 20px;
+    margin-left: 157px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+/* main_text1 */
+.main_text1 {
+    width : 100%;
+    height: 669px;
+    background : white;
+}
+.main_text1 > h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.main_text1 > .contents1 {
+    text-align: center;
+}
+
+
+.service{
+    width:1280px;
+    height: 427px;
+    display: flex;
+    margin:49px auto; /*상하 : 49px*/
+    /* background: skyblue; */
+}
+
+.service > .contents2 {
+    padding: 20px;
+}
+
+.service > .contents2 > h2 {
+    margin-bottom: 27px;
+}
+
+
+/* main_text2*/
+.main_text2 {
+    width:100%;
+    height:418px;
+    background-image: url("img/contact.png");
+}
+
+.main_text2 > ul {
+    display: flex;
+    padding-top: 138px;
+}
+
+.main_text2 > ul > li {
+    flex: 1;  /* 한 공간씩 나누기 */
+    text-align: center;
+}
+
+.main_text2 > ul > li > div > h1, /*콤마를 찍으면 여러개 적용할수있다*/
+.main_text2 > ul > li > div  {
+    color:#fff;
+
+}
+
+.more2 {
+    width: 220px;
+    height: 40px;
+    margin: 16px auto;
+    line-height: 40px; /* 줄 높이*/
+    border: 1px solid #fff;
+    cursor: pointer; /*버튼느낌이나게 마우스커서 모양 바꾸기*/
+}
+
+#link_header {
+    
+}
+
+footer{
+    display: flex;
+    background: #1F1F1F;
+    padding: 50px;
+}
+
+footer > div:first-child {
+    flex: 3; /*1자리씩 줄떄를 제외, flex의 합은 12이다 */
+    text-align: center;
+    color: #fff;
+    /* background: red; */
+}
+
+footer > div:last-child {
+    flex:9;
+    color: #fff;
+    /* background: blue; */
+    
+}
